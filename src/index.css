@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-trippy-pink: #ff00ff;
+  --color-trippy-cyan: #00ffff;
+  --color-trippy-purple: #8000ff;
+  --color-trippy-green: #00ff00;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white selection:bg-trippy-pink selection:text-black overflow-x-hidden;
+  }
+}
+
+.ascii-container {
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1;
+  white-space: pre;
+  letter-spacing: 0;
+  transform-origin: top left;
+  transition: transform 0.2s ease-out;
+}
+
+.ascii-char {
+  display: inline-block;
+  line-height: 1;
+}
+
+.glitch-text {
+  text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 1rem;
+  background: linear-gradient(to right, #ff00ff, #00ffff, #8000ff);
+  padding: 2px;
+}
+
+.gradient-border > div {
+  background: black;
+  border-radius: calc(1rem - 2px);
+}
+

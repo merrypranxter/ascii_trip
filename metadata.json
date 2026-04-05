@@ -1,0 +1,5 @@
+{
+  "name": "ASCII Trip",
+  "description": "A weird and trippy ASCII art generator that turns images and prompts into creative typographic masterpieces using custom character sets.",
+  "requestFramePermissions": []
+}
